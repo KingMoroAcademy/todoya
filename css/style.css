@@ -1,0 +1,155 @@
+:root {
+  --main-color: #ddd;
+  --sec-color: rgba(0,0,0,0.2);
+  --dark-color: #000;
+  --del-color: #af0000;
+  --lighty-color: #b8d6ff;
+  --sky-color: #4162f6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--sec-color);
+  font-family: "Titillium Web", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  min-height: 95vh;
+  width: 96%;
+  max-width: 400px;
+  margin: 2vh auto;
+  border-radius: 15px 15px 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(25vh, auto);
+}
+.container .header {
+  width: 100%;
+  background-image: url("../images/header.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 15px 15px 0 0;
+  display: grid;
+}
+.container .header .clear {
+  justify-self: end;
+  padding: 10px 20px;
+}
+.container .header .clear i {
+  font-size: 30px;
+  color: var(--main-color);
+}
+.container .header .clear i:hover {
+  cursor: pointer;
+  text-shadow: 1px 3px 5px var(--dark-color);
+  transform: rotate(45deg);
+}
+.container .header #date {
+  align-self: end;
+  padding: 10px 20px;
+  color: var(--main-color);
+  font-size: 25px;
+  font-family: "Titillium Web", sans-serif;
+}
+.container .content {
+  width: 100%;
+  background-color: #FFF;
+  display: grid;
+}
+.container .content ul {
+  align-self: start;
+}
+.container .content ul .item {
+  width: 100%;
+  min-height: 45px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .content ul .item i.co {
+  font-size: 25px;
+}
+.container .content ul .item i.co:hover {
+  cursor: pointer;
+}
+.container .content ul .item .fa-circle-check {
+  color: #6eb200;
+}
+.container .content ul .item p.text {
+  max-width: 100%;
+  font-size: 20px;
+}
+.container .content ul .item .lineThrough {
+  text-decoration: line-through;
+  color: var(--main-color);
+}
+.container .content ul .item i.de {
+  font-size: 25px;
+  color: var(--sec-color);
+  transition: 0.3s;
+}
+.container .content ul .item i.de:hover {
+  color: var(--del-color);
+  cursor: pointer;
+}
+.container .content .add-to-do {
+  align-self: end;
+  width: 100%;
+  background-color: #FFF;
+  display: grid;
+  grid-template-columns: 7% 87%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.container .content .add-to-do i {
+  font-size: 40px;
+  color: #4162f6;
+}
+.container .content .add-to-do input {
+  height: 35px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  border: 1px dashed var(--sec-color);
+  border-radius: 10px;
+  color: var(--sky-color);
+}
+.container .content .add-to-do input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: var(--sec-color);
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+}
+.container .content .add-to-do input::-moz-placeholder { /* Firefox 19+ */
+  color: var(--sky-color);
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+}
+.container .content .add-to-do input:-ms-input-placeholder { /* IE 10+ */
+  color: var(--sky-color);
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+}
+.container .content .add-to-do input:-moz-placeholder { /* Firefox 18- */
+  color: var(--sky-color);
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+}/*# sourceMappingURL=style.css.map */

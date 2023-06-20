@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ToDoYa | JavaScript To Do List</title>
+        <meta name="author" content="Mohamed Shaker">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <!--Start clear tasks button-->
+                <div class="clear">
+                    <i class="fa-solid fa-rotate fa-2x" aria-hidden="true"></i>
+                </div>
+                <!--End clear tasks button-->
+                <!--Start Show today's date-->
+                <div id="date"></div>
+                <!--End Show today's date-->
+            </div>
+            <div class="content">
+                <!--Start All the tasks Here from JS-->
+                <ul id="list"></ul>
+                <!--End All the tasks Here from JS-->
+                <!--Start Add New Task-->
+                <div class="add-to-do">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    <input type="text" id="input" placeholder="Add a to-do"/>
+                </div>
+                <!--End Add New Task-->
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+
+</html>

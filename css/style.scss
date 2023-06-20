@@ -1,0 +1,164 @@
+:root {
+    --main-color: #ddd;
+    --sec-color: rgba(0,0,0,0.2);
+    --dark-color: #000;
+    --del-color: #af0000;
+    --lighty-color: #b8d6ff;
+    --sky-color: #4162f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--sec-color);
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container{
+    min-height: 95vh;
+    width: 96%;
+    max-width:400px;
+    margin:2vh auto;
+    border-radius: 15px 15px 0 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(25vh, auto);
+    .header{
+        width: 100%;
+        background-image: url('../images/header.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        border-radius: 15px 15px 0 0;
+        display: grid;
+        .clear{
+            justify-self: end;
+            padding: 10px 20px;
+            i{
+                font-size: 30px;
+                color: var(--main-color);
+                &:hover{
+                    cursor: pointer;
+                    text-shadow: 1px 3px 5px var(--dark-color);
+                    transform: rotate(45deg);
+                }
+            }
+        }
+        #date{
+            align-self: end;
+            padding: 10px 20px;
+            color: var(--main-color);
+            font-size: 25px;
+            font-family: 'Titillium Web', sans-serif;
+        }
+    } 
+    .content{
+        width:100%;
+        background-color: #FFF;
+        
+        display: grid;
+        // &::-webkit-scrollbar { 
+        //     display: none; 
+        // }
+        ul{
+            align-self: start;
+            .item{
+                width: 100%;
+                min-height: 45px;
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+                list-style: none;
+                padding: 10px;
+
+                display: grid;
+                grid-template-columns: 1fr 7fr 1fr;
+                gap: 20px;
+                align-items: center;
+                justify-content: space-between;
+                i.co{
+                    font-size: 25px;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                } 
+                .fa-circle-check{
+                    color:#6eb200;
+                }
+                p.text{
+                    // width: 100%;
+                    max-width: 100%;
+                    font-size: 20px;
+                }
+                .lineThrough{
+                    text-decoration: line-through;
+                    color : var(--main-color);
+                }
+                i.de{
+                    font-size: 25px;
+                    color: var(--sec-color);
+                    transition: 0.3s;
+                    &:hover{
+                        color: var(--del-color);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .add-to-do{
+            align-self: end;
+            width: 100%;
+            // height: 80px;
+            background-color: #FFF;
+            // border-top: 1px solid rgba(0,0,0,0.1);
+
+            display: grid;
+            grid-template-columns: 7% 87%;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            i{
+                font-size: 40px;
+                color: #4162f6;
+            }
+            input{
+                height: 35px;
+                width: 100%;
+                background-color: transparent;
+                border: none;
+                font-size: 20px;
+                padding: 10px;
+                border: 1px dashed var(--sec-color);
+                border-radius: 10px;
+                color: var(--sky-color);
+                &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                    color: var(--sec-color);
+                    font-family: 'Titillium Web', sans-serif;
+                    font-size: 20px;
+                }
+                &::-moz-placeholder { /* Firefox 19+ */
+                    color: var(--sky-color);
+                    font-family: 'Titillium Web', sans-serif;
+                    font-size: 20px;
+                }
+                &:-ms-input-placeholder { /* IE 10+ */
+                    color: var(--sky-color);
+                    font-family: 'Titillium Web', sans-serif;
+                    font-size: 20px;
+                }
+                &:-moz-placeholder { /* Firefox 18- */
+                    color: var(--sky-color);
+                    font-family: 'Titillium Web', sans-serif;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
